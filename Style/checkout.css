@@ -1,0 +1,173 @@
+body{
+    font-family: "FuturaLTPro-Book",Sans-Serif!important;
+    color: grey;
+}
+#rcmain{
+    display: flex;
+    width: 100%;
+    
+}
+
+/* LEFT BOX */
+#rcleft{
+    flex: 3.5;
+    /* border: 1px solid red; */
+}
+#rcfirstdiv{
+    /* border: 1px solid red; */
+    width: 70%;
+    margin: auto;
+    margin-top: 8%;
+}
+#rcfirstdiv div{
+    display: flex;
+}
+#rcfirstdiv div a{
+    text-decoration: none;
+    color: rgb(170, 9, 9);
+    font-size: 14px;
+}
+.rInformation{
+    color: black;
+}
+
+#rcseconddiv{
+    
+    width: 70%;
+    margin: auto;
+}
+.rccontact{
+    font-size: 18px;
+}
+.rcnamesignout{
+    margin-top: -2%;
+    display: flex;
+}
+.rcnamesignout img{
+    margin-top: 1%;
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+}
+.rcnamesignout div{
+    line-height: 5px;
+}
+.rcnamesignout a{
+    text-decoration: none;
+    color: rgb(170, 9, 9);
+    font-size: 14px;
+    margin-right: 2%;
+}
+
+#rcthirddiv{
+    /* border: 1px solid red; */
+    width: 80%;
+    margin: auto;
+    margin-left: 15%;
+    margin-top: 4%;
+}
+#rcthirddiv p{
+    font-size: 18px;
+}
+.rcname{
+    display: flex;
+    justify-content: space-between;
+}
+.rcname input{
+    border:.5px solid grey;
+    margin-top: 3%;
+    width: 47%;
+    border-radius: 2px;
+    height: 40px;
+}
+.rcaddress{
+    border:.5px solid grey;
+    margin-top: 3%;
+    width: 99%;
+    border-radius: 2px;
+    height: 40px;
+}
+.rccountry{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3%;
+    border-radius: 2px;
+    height: 40px;
+}
+.rcreturn{
+    text-decoration: none;
+}
+.rcreturn p{
+    margin-left: 15%;
+    margin-top: 5%;
+    color: rgb(170, 9, 9);
+    font-size: 14px;
+}
+.rcline{
+    margin-top: 8%;
+    margin-left: 15%;
+    width: 80%;
+    border-top: 1px solid lightgray;
+}
+.rcpolicy{
+    margin-left: 15%;
+    margin-top: 2%;
+}
+.rcpolicy a{
+    text-decoration: none;
+    color: rgb(170, 9, 9);
+    font-size: 14px;
+    margin-right: 2%;
+}
+
+/* RIGHT BOX */
+#rcright{
+    flex: 3;
+    background-color: rgb(250,250,250);
+    /* border: 1px solid teal; */
+}
+.rcnewline{
+    border-top: 1px solid lightgray;
+    width: 75%;
+    margin: auto;
+    margin-top: 5%;
+
+margin-bottom: 4%;}
+.rcgift{
+    width: 75%;
+    margin: auto;
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.rcgift input{
+    width: 70%;
+    height: 40px;
+    border-radius: 5px;
+    border:.5px solid grey;
+}
+.rcgift button{
+    width: 25%;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(200,200,200);
+    border: none;
+}
+.rcgift button:hover{
+    transition: .5s;
+    background-color: black;
+}
+.rcsum{
+    font-size: 15px;
+    width: 75%;
+    margin: auto;
+    margin-top: -2%;
+    display: flex;
+    justify-content: space-between;
+    color: grey;
+}
+.rctotal{
+    color: black;
+}
