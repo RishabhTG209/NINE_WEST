@@ -105,7 +105,7 @@ body{
 }
 #r-color{
     /* border: 1px solid teal; */
-    height: 5%;
+    height: 9%;
     width: 50%;
     margin-top: 5%;
 }
@@ -122,12 +122,20 @@ body{
     font-weight: bold;
     color: black;
 }
-/* .small-color-box{
-    border: 1px solid gray;
+.small-color-box{
+    /* border: 1px solid gray; */
     height: 100%;
     width: 13%;
     margin-right: 7%;
-} */
+}
+.small-color-box img{
+    width: 100%;
+    cursor: pointer;
+}
+.small-color-box img:hover{
+    transform: scale(2);
+    transition: 1s;
+}
 #r-size{
     display: flex;
     justify-content: space-between;
@@ -177,18 +185,170 @@ body{
 #add-to-bag{
     width: 100%;
     height: 4%;
-    margin-top: 2%;
+    margin-top: 5%;
     background-color: black;
     color: white;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 #buy-it-now{
     border: none;
     width: 100%;
     height: 4%;
-    margin-top: 2%;
+    margin-top: 3.5%;
     border-radius: 5px;
     background-color: black;
     color: white;
+    cursor: pointer;
+}
+
+/* next-change */
+#add-to-wishlist{
+    border: 1px solid gray;
+    height: 5%;
+    width: 38%;
+    margin-left: 4%;
+    margin-top: 7%;
+    cursor: pointer;
+}
+#add-to-wishlist .fa-heart{
+    font-size: 20px;
+    margin: 0% 5%;
+}
+#add-to-wishlist p{
+    font-size: 15px;
+    /* margin: 0% 5%; */
+}
+#r-p{
+    /* border: 1px solid black; */
+    height: 7%;
+    width: 100%;
+    margin-top: 7%;
+}
+#r-p p{
+    margin-top: 1% 1% 0% 2%;
+    font-size: 12px;
+
+}
+#r-p1{
+    /* border: 1px solid black; */
+    height: 5%;
+    width: 98%;
+    margin-top: 1%;
+}
+#r-p1>div{
+    height: 40%;
+    /* border: 1px solid red; */
+}
+#collections{
+    margin-top: -1%;
+    font-weight: bold;
+    color: grey;
+}
+#desc{
+    font-size: 12px;
+    margin-top: -1%;
+}
+#r-p1>div:nth-child(1){
+    height: 60%;
+}
+#collection-img{
+    /* border: 1px solid black; */
+    height: 20%;
+    width: 63%;
+    margin-top: 1%;
+    display: flex;
+}
+#small-img{
+    height: 100%;
+    width: 45%;
+    /* border: 1px solid red; */
+}
+#img{
+    /* border: 1px solid teal; */
+    width:100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#small-img:nth-child(1){
+    margin-right: 5%;
+}
+#exclusive{
+    /* border: 1px solid red; */
+    height: 10%;
+    margin-top: 5%;
+    margin-bottom: 0%;
+    font-size: 14px;
+}
+#next-exclusive{
+    /* border: 1px solid red; */
+    font-size: 12px;
+    margin:0;
+
+}
+#next-exclusive1{
+    /* border: 1px solid red; */
+    font-size: 12px;
+    margin:0;
+
+}
+#n-next-exclusive{
+    /* border: 1px solid red; */
+    margin-top: 1%;
+    font-size: 14px;
+}
+
+/* n-nchange */
+#r-like{
+    /* border: solid 1px black; */
+    height: 45px;
+    width: 30%;
+    margin: auto;
+    text-align: center;
+}
+#r-like p{
+    font-size: 28px;
+    color: rgba(0, 0, 0, 0.671);
+}
+#r-similar-img{
+    /* border: solid 1px black; */
+    width: 84%;
+    display: flex;
+    margin: auto;
+
+}
+#r-similar-img>div{
+    /* border: 1px solid red; */
+    width: 23%;
+    height: 400px;
+    margin-right: 2%;
+}
+#r-similar-img>div>img{
+    height: 70%;
+    /* border: 1px solid blue; */
+    width: 100%;
+}
+.price-as-marked{
+    color: rgb(197, 1, 1);
+    font-size: 10px;
+    text-align: center;
+}
+#rtitle{
+    text-align: center;
+    margin-top: 6%;
+}
+#rtitle div{
+    line-height: 6px;
+}
+#rtitle-name{
+    font-size: 13px;
+}
+#rtitle-price p{
+    font-size: 13px;
+    color: indianred;
+}
+#rmore-colors a{
+    color: grey;
+    font-size: 10px;
 }
