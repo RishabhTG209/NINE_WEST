@@ -33,33 +33,50 @@ body{
 }
 
 #rcseconddiv{
-    
-    width: 70%;
+    width: 80%;
     margin: auto;
+    margin-left: 15%;
     margin-top: 5%;
 }
-.rccontact{
-    font-size: 18px;
-}
-.rcnamesignout{
-    margin-top: -2%;
+.rscheck{
+    border: 2px solid black;
+    height: 45px;
+    border-radius: 10px;
     display: flex;
+    justify-content: center;
+    color: black;
+    font-size: 16px;
 }
-.rcnamesignout img{
-    margin-top: 1%;
-    width: 10%;
-    height: 10%;
-    border-radius: 50%;
-    margin-right: 2%;
-}
-.rcnamesignout div{
-    line-height: 5px;
-}
-.rcnamesignout a{
-    text-decoration: none;
-    color: rgba(170, 9, 9, 0.719);
+.rsinsideseconddiv{
+    margin-top: 3%;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
     font-size: 14px;
-    margin-right: 2%;
+}
+.rsline{
+    border-top: .5px solid lightgrey;
+    width: 95%;
+    margin: auto;
+}
+.rsinside1{
+    display: flex;
+    /* justify-content: space-between; */
+}
+/* .rsinside1 div{
+    width: 33%;
+} */
+.rsspecial{
+    width: 50%;
+    margin-left: 10%;
+}
+.rscommon{
+    margin-left: 2%;
+}
+#rstomove{
+    /* border: 1px solid red; */
+    cursor: pointer;
+    color: rgba(170, 9, 9, 0.719);
+    margin-left: 18%;
 }
 
 #rcthirddiv{
@@ -69,33 +86,38 @@ body{
     margin-left: 15%;
     margin-top: 6%;
 }
-#rcthirddiv p{
+.rsshipping{
     font-size: 18px;
 }
-.rcname{
+.rsname{
+    border: .5px solid lightgray;
+    border-radius: 5px;
+}
+.rsnameinside{
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid lightgray;
 }
-.rcname input{
-    border:.5px solid grey;
-    margin-top: 3%;
-    width: 47%;
-    border-radius: 2px;
-    height: 40px;
-}
-.rcaddress{
-    border:.5px solid grey;
-    margin-top: 3%;
-    width: 99%;
-    border-radius: 2px;
-    height: 40px;
-}
-.rccountry{
+.rsnameinside div{
+    /* border: 1px solid red; */
+    width: 80%;
     display: flex;
-    justify-content: space-between;
-    margin-top: 3%;
-    border-radius: 2px;
-    height: 40px;
+    margin-left: 2%;
+}
+.rsnameinside div input{
+    color: rgba(170, 9, 9, 0.719);
+    margin-top: 4%;
+    
+}
+.rsnameinside div p{
+    margin-left: 1%;
+    font-size: 15px;
+}
+.rsblack{
+    color: black;
+    font-size: 15px;
+    margin-right: 2%;
 }
 .rcreturn{
     width: 80%;
@@ -171,7 +193,6 @@ margin-bottom: 4%;}
     border-radius: 5px;
     border:.5px solid grey;
 }
-
 .rcgift button{
     width: 25%;
     font-weight: bold;
