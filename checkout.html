@@ -46,7 +46,7 @@
             </div>
             <div class="rcreturn">
                 <a href="cart.html"><p>< Return to Shopping Bag</p></a>
-                <button>Continue to Shipping</button>
+                <button class="rshipping">Continue to Shipping</button>
             </div>
             <div class="rcline"></div>
             <div class="rcpolicy">
@@ -88,3 +88,8 @@
     </div>
 </body>
 </html>
+<script>
+    document.querySelector(".rshipping").addEventListener("click",function(){
+        window.location.href="shipping.html"
+    })
+</script>

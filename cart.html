@@ -57,13 +57,12 @@
     </div>
     <div class="rcartbutton">
         <a href="index.html">CONTINUE SHOPPING</a>
-        <button>CHECKOUT</button>
+        <button class="rcheckout">CHECKOUT</button>
     </div>
-    <!-- <div class="rcartpayoption">
-        <img src="data:image/png;base64,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" alt="">
-        <img src="https://download.logo.wine/logo/Amazon_Pay/Amazon_Pay-Logo.wine.png" alt="">
-        <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/GooglePay_Lockup.max-1200x1200.png" alt="">
-    </div> -->
-
 </body>
 </html>
+<script>
+    document.querySelector(".rcheckout").addEventListener("click",function(){
+        window.location.href="checkout.html"
+    })
+</script>

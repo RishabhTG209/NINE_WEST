@@ -62,8 +62,8 @@
                 </div>
             </div>
             <div class="rcreturn">
-                <a href="cart.html"><p>< Return to Information</p></a>
-                <button>Continue to Payment</button>
+                <a href="checkout.html"><p>< Return to Information</p></a>
+                <button class="rpayment">Continue to Payment</button>
             </div>
             <div class="rcline"></div>
             <div class="rcpolicy">
@@ -105,3 +105,9 @@
     </div>
 </body>
 </html>
+
+<script>
+    document.querySelector(".rpayment").addEventListener("click",function(){
+        window.location.href="payment.html"
+    })
+</script>

@@ -1,6 +1,6 @@
 body{
     font-family: "FuturaLTPro-Book",Sans-Serif!important;
-    color: grey;
+    color: rgb(66, 63, 63);
 }
 #rcmain{
     display: flex;
@@ -89,6 +89,11 @@ body{
 .rsshipping{
     font-size: 18px;
 }
+.rpaysent{
+    margin-top: -2%;
+    font-size: 14px;
+    margin-bottom: 5%;
+}
 .rsname{
     border: .5px solid lightgray;
     border-radius: 5px;
@@ -165,7 +170,26 @@ body{
     font-size: 14px;
     margin-right: 2%;
 }
-
+.rpremmember{
+    margin-top: 8%;
+}
+.rpinside{
+    border: 1px solid lightgray;
+}
+.rpinside div{
+    width: 80%;
+    display: flex;
+    margin-left: 2%;
+}
+.rpinside div input{
+    color: rgba(170, 9, 9, 0.719);
+    margin-top: 4%;
+    
+}
+.rpinside div p{
+    margin-left: 1%;
+    font-size: 15px;
+}
 /* RIGHT BOX */
 #rcright{
     flex: 3;
