@@ -1,0 +1,194 @@
+body{
+    margin: 0% .2%;
+    font-family: "FuturaLTPro-Book",Sans-Serif!important;
+}
+#rhead{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2%;
+    font-size: 11.5px;
+}
+#r-head-left>p>a,#r-head-right>p>a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+#r-head-left,#r-head-right{
+    /* border: 1px solid teal; */
+    display: flex;
+    justify-content: space-between;
+    margin: 2% 4% 0% 4%;
+
+}
+#rcontainer{
+    display: flex;
+    /* border: solid 2px red; */
+    width: 80%;
+    margin: auto;
+    height: 1000px;
+    padding: 2%;
+}
+#rleft{
+    /* border: solid 1px black; */
+    height: 50%;
+    width: 43%;
+    margin-right: 5%;
+    display: flex;
+}
+#r-l-left{
+    /* border: 1px solid blue; */
+    height: 95%;
+    width: 15%;
+}
+#r-l-left img{
+    width: 100%;
+    cursor: pointer;
+}
+#r-r-right{
+    /* border: 1px solid blue; */
+    height: 80%;
+    width: 75%;
+    margin: 0 5%;
+}
+#r-r-right img{
+    width: 100%;
+    cursor: pointer;
+}
+.r-small-box{
+    /* border: 1px solid black; */
+    height: 19.5%;
+    width: 99%;
+}
+#rright{
+    /* border: solid 1px blue; */
+    height: 98%;
+    width: 47%;
+    padding: 1%;
+}
+#r-rright-head{
+    /* border: 1px solid yellow; */
+    height: 10%;
+    display: flex;
+}
+#left{
+    /* border: 1px solid green; */
+    width: 50%;
+}
+#left>div{
+    /* border: 1px solid red; */
+    height: 28%;
+}
+#r-r-name{
+    font-size: 20px;
+    font-weight: bold;
+}
+#r-r-price{
+    font-size: 17px;
+    color: indianred;
+    font-weight: bold;
+}
+#r-r-discount{
+    font-size: 14px;
+    color: indianred;
+}
+#left>div:nth-child(1){
+    height: 40%;
+}
+#right>div{
+    /* border: 1px solid red; */
+    font-size: 12px;
+    height: 19%;
+    width: 75px;
+    margin-left: 155px;
+    margin-top: 45px;
+}
+#r-color{
+    /* border: 1px solid teal; */
+    height: 5%;
+    width: 50%;
+    margin-top: 5%;
+}
+#r-color>div{
+    /* border: 1px solid black; */
+    margin-bottom: 3%;
+}
+#r-color>div:nth-child(3){
+    height: 32%;
+    display: flex;
+}
+.color{
+    font-size: 13px;
+    font-weight: bold;
+    color: black;
+}
+/* .small-color-box{
+    border: 1px solid gray;
+    height: 100%;
+    width: 13%;
+    margin-right: 7%;
+} */
+#r-size{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    height: 2%;
+    width: 90%;
+    font-size: 14px;
+    font-weight: bold;
+    color: grey;
+}
+#r-size>p{
+    /* border: 1px solid indianred; */
+    height: 100%;
+    margin-top: 1%;
+}
+#size-box{
+    height: 5%;
+    width: 90%;
+    /* border: 1px solid firebrick; */
+    margin-top: 1%;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(10,1fr);
+    grid-gap: 6px 9px;
+}
+#size-box>div{
+    cursor: pointer;
+    height: 80%;
+    width: 100%;
+    border: 1px solid lightgray;
+    /* background-color: rgba(211, 211, 211, 0.411); */
+    border-radius: 3px;
+    text-align: center;
+    color: grey;
+}
+#r-interest-free{
+    border: 1px solid lightgray;
+    height: 4%;
+    width: 75%;
+    margin-top: 4%;
+    font-size: 12px;
+    text-align: center;
+}
+#r-interest-free p{
+    margin-top: 1%;
+}
+#add-to-bag{
+    width: 100%;
+    height: 4%;
+    margin-top: 2%;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+#buy-it-now{
+    border: none;
+    width: 100%;
+    height: 4%;
+    margin-top: 2%;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}
