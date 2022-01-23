@@ -7,6 +7,7 @@
     <title>Create Account | NINE WEST</title>
     <link rel="stylesheet" href="./Style/signin.css">
     <link rel="stylesheet" href="./Style/navbar.css">
+    <link rel="stylesheet" href="./Style/footer.css">
     <script src="https://kit.fontawesome.com/683b4b40e3.js" 	crossorigin="anonymous"></script>
 </head>
 <body>
@@ -42,6 +43,9 @@
         </div>
 
     </div>
+    <div id="rrfooter">
+        <!-- FOOTER -->
+    </div>
 </body>
 
 </html>
@@ -49,6 +53,12 @@
 <script src="https://kit.fontawesome.com/683b4b40e3.js" 	crossorigin="anonymous"></script>
 <script type="module">
 
-    import navbar from "./Scripts/navbar.js";
+import navbar from "./components/navbar.js";
     document.querySelector("#rrnavbar").innerHTML=navbar();
+
+    document.querySelector("#rsigninhover").addEventListener("click",function(){
+        window.location.href="signin.html"
+    })
+    import footer from "./components/footer.js";
+    document.querySelector("#rrfooter").innerHTML=footer();
 </script>

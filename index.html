@@ -8,6 +8,7 @@
     <link rel = "icon" href = "https://lh3.googleusercontent.com/vOkdv6GWvUCyLLjzjSUrewsZRJHylWCMhT9eYX6q8AEMZ_Tfk942Ur7OkAmobVZ2Ag"  type = "image/x-icon">
     <link rel="stylesheet" href="./Style/index.css">
     <link rel="stylesheet" href="./Style/navbar.css">
+    <link rel="stylesheet" href="./Style/footer.css">
     <script src="https://kit.fontawesome.com/683b4b40e3.js" 	crossorigin="anonymous"></script>
 </head>
 
@@ -182,11 +183,22 @@
 <div class="rlastphoto">
     <img src="https://cdn.shopify.com/s/files/1/0267/3737/7324/files/NW20_TextUs_HP_DT_Banner_20_2000x_95239433-da5e-428b-847e-92a685fda117_2000x.gif?v=1633553289" alt="">
 </div>
+
+<div id="rrfooter">
+    <!-- FOOTER -->
+</div>
 </body>
 </html> 
 <script src="./Scripts/index.js"></script>
 <script type="module">
 
-    import navbar from "./Scripts/navbar.js";
+import navbar from "./components/navbar.js";
     document.querySelector("#rrnavbar").innerHTML=navbar();
+
+    document.querySelector("#rsigninhover").addEventListener("click",function(){
+        window.location.href="signin.html"
+    })
+
+    import footer from "./components/footer.js";
+    document.querySelector("#rrfooter").innerHTML=footer();
 </script>

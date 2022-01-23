@@ -28,6 +28,8 @@ body{
     width: 98%;
     margin: auto;
     border-bottom: 1px solid lightgray;
+}
+#divfinal{
     display: flex;
 }
 .rimgname{
@@ -69,6 +71,10 @@ body{
     font-size: 16px;
     border: none;
     cursor: pointer;
+}
+#rquantity button:hover{
+    background-color: grey;
+    transition: .8s;
 }
 #rquantity p{
     margin-top: 22%;

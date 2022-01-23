@@ -2,6 +2,11 @@ var cartData = JSON.parse(localStorage.getItem('heelsData'))
 // console.log('cartData:', cartData)
 cartDataAppend(cartData)
 
+
+var cart =  JSON.parse(localStorage.getItem("cartdetails")) || []
+
+
+
 function cartDataAppend(data){
 
     var pic1 = document.createElement('img')
@@ -43,5 +48,23 @@ function cartDataAppend(data){
     priceshow.append(price)
 
 
+    let butt = document.querySelector('#add-to-bag')
+    butt.addEventListener('click', function(){
+        cartdata(data)
+    })
+    
 
 }
+
+
+function cartdata(data){
+    cart.push(data)
+    localStorage.setItem('cartdetails', JSON.stringify(cart))
+    console.log(cart)
+}
+
+
+let go = document.getElementById('buy-it-now')
+    go.addEventListener('click' ,function(){
+        window.location.href = 'cart.html'
+    })

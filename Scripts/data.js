@@ -325,6 +325,12 @@ appendData(heel9, box9)
 let box10 = document.querySelector('.twoimgee')
 appendData(heel10, box10)
 
+
+
+
+
+
+
 function appendData(data, location){
     data.map((el)=>{
 

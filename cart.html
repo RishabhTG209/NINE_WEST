@@ -8,6 +8,7 @@
     <link rel = "icon" href = "https://lh3.googleusercontent.com/vOkdv6GWvUCyLLjzjSUrewsZRJHylWCMhT9eYX6q8AEMZ_Tfk942Ur7OkAmobVZ2Ag"  type = "image/x-icon">
     <link rel="stylesheet" href="./Style/cart.css">
     <link rel="stylesheet" href="./Style/navbar.css">
+    <link rel="stylesheet" href="./Style/footer.css">
     <script src="https://kit.fontawesome.com/683b4b40e3.js" 	crossorigin="anonymous"></script>
 </head>
 <body>
@@ -19,41 +20,7 @@
         <div class="rquantity"><p>Quantity</p></div>
         <div class="rtotal"><p>Total</p></div>
     </div>
-    <!-- <div id="rcartdyanamic">
-        <div id="rproducts">
-            <div class="rimgname">
-                <img src="https://cdn.shopify.com/s/files/1/0267/3737/7324/products/PG.NWSPEAKUP.JJ0CCB1.RZ_3fc02bfb-aef0-47ec-9c63-82a34d1d2431_200x.jpg?v=1582668528" alt="">
-                <div>
-                    <p>Speakup Almond Toe Flats</p>
-                    <div class="rdisplay">
-                        <p>Size :</p>
-                        <p>5</p>
-                    </div>
-                    <div class="rdisplay">
-                        <p>Width :</p>
-                        <p>M</p>
-                    </div>
-                    <div class="rdisplay">
-                        <p>Color : </p>
-                        <p>Black</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="rprice">
-            <p>$635</p>
-        </div>
-        <div id="rquantity">
-            <button>-</button>
-            <p>1</p>
-            <button>+</button>
-        </div>
-        <div id="rtotal">
-            <p>$635</p>
-        </div>
-    </div> -->
     <div id="rcartdyanamic"></div>
-
     <div class="rbigline">
         <div class="rinsidebigline">
             <p>Subtotal :</p>
@@ -63,6 +30,9 @@
     <div class="rcartbutton">
         <a href="index.html">CONTINUE SHOPPING</a>
         <button class="rcheckout">CHECKOUT</button>
+    </div>
+    <div id="rrfooter">
+        <!-- FOOTER -->
     </div>
 </body>
 </html>
@@ -74,6 +44,13 @@
 </script>
 <script type="module">
 
-    import navbar from "./Scripts/navbar.js";
+    import navbar from "./components/navbar.js";
     document.querySelector("#rrnavbar").innerHTML=navbar();
+
+    document.querySelector("#rsigninhover").addEventListener("click",function(){
+        window.location.href="signin.html"
+    })
+
+    import footer from "./components/footer.js";
+    document.querySelector("#rrfooter").innerHTML=footer();
 </script>
