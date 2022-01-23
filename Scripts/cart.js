@@ -55,4 +55,4 @@ p41.textContent="$635";
 total.append(p41); 
 document.querySelector("#rcartdyanamic").append(product,price,quantity,total);
 
-document.querySelector("#rsubtotalprice").append(total);
+// document.querySelector("#rsubtotalprice").append(total);

@@ -23,14 +23,13 @@ document.querySelector("#rforgot").addEventListener("click",(e) => {
     var flag=0;
     for(let i=0;i<database.length;i++){
         if(database[i].email==em && database[i].pass==pa){
-            
             flag=1;
             break;
         }
     }
     if(flag==1){
         alert("login successfully")
-        window.location.href="#";
+        window.location.href="index.html";
     } else{
         alert("wrong credentials")
     }
