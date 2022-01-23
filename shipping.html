@@ -79,14 +79,18 @@
             <div>
                 <!-- <div class="rcnewline"></div> -->
                 <div class="rcgift">
-                    <input type="text" placeholder="Gift Card or Discount code">
-                    <button>Apply</button> 
+                    <input id="discount" type="text" placeholder="Gift Card or Discount code">
+                    <button id="applydiscount">Apply</button> 
                 </div>
                 <div class="rcnewline"></div>
                 <div>
                     <div class="rcsum">
                         <p>Subtotal</p>
-                        <p class="rctotal"></p>
+                        <p id="rctotal"></p>
+                    </div>
+                    <div class="rcsum">
+                        <p>Discount </p>
+                        <p class="rcdiscount"></p>
                     </div>
                     <div class="rcsum">
                         <p>Shipping </p>
@@ -96,8 +100,8 @@
                     <div class="rcsum">
                         <p>Total</p>
                         <div>
-                            <p>USD</p>
-                            <p class="rctotal"></p>
+                            <p>$</p>
+                            <p id="rfinaltotal"></p>
                         </div>
                     </div>
                 </div>
@@ -106,7 +110,7 @@
     </div>
 </body>
 </html>
-
+<script src="./Scripts/shipping.js"></script>
 <script>
     document.querySelector(".rpayment").addEventListener("click",function(){
         window.location.href="payment.html"

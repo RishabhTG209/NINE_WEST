@@ -238,6 +238,16 @@ margin-bottom: 4%;}
     justify-content: space-between;
     color: grey;
 }
+.rcsum div{
+    display: flex;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+}
+#rctotal{
+    color: black;
+    font-weight: bold;
+}
 .rctotal{
     color: black;
 }

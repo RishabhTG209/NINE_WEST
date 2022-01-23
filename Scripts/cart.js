@@ -5,9 +5,13 @@ console.log('cartitems:', cartitems)
 appendcart(cartitems)
 let main=document.querySelector("#rcartdyanamic");
 let subtotalprice=document.querySelector("#rsubtotalprice")
+var totalprice_cart
+
+let final=[]||JSON.parse(localStorage.getItem("finalprice"));
+
 
 function appendcart(elem){
-    let totalprice_cart=0;
+    totalprice_cart=0;
     elem.map((el,index)=>{
         
         let price=document.createElement("div");
@@ -91,3 +95,9 @@ function deleteItem(index){
     subtotalprice.innerHTML=""
     appendcart(cartitems);         
 }
+
+document.querySelector(".rcheckout").addEventListener("click",function(){
+    final.push(totalprice_cart);
+    localStorage.setItem('finalprice', JSON.stringify(final))
+    window.location.href="checkout.html"
+})

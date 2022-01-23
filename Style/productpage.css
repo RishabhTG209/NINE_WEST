@@ -215,6 +215,12 @@ body{
     border-radius: 5px;
     cursor: pointer;
 }
+#add-to-bag:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    transition: 1s;
+}
 #buy-it-now{
     border: none;
     width: 100%;
@@ -224,6 +230,12 @@ body{
     background-color: black;
     color: white;
     cursor: pointer;
+}
+#buy-it-now:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    transition: 1s;
 }
 
 /* next-change */
@@ -238,6 +250,9 @@ body{
 #add-to-wishlist .fa-heart{
     font-size: 20px;
     margin: 0% 5%;
+}
+#add-to-wishlist .fa-heart:hover{
+    color: red;
 }
 #add-to-wishlist p{
     font-size: 15px;

@@ -127,6 +127,10 @@ body{
     color: white;
     cursor: pointer;
 }
+.rcreturn button:hover{
+    background-color: grey;
+    transition: .8s;
+}
 .rcline{
     margin-top: 8%;
     margin-left: 15%;
@@ -192,6 +196,16 @@ margin-bottom: 4%;}
     display: flex;
     justify-content: space-between;
     color: grey;
+}
+.rcsum div{
+    display: flex;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+}
+#rctotal{
+    color: black;
+    font-weight: bold;
 }
 .rctotal{
     color: black;
