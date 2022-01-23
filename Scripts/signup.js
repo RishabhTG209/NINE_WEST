@@ -12,6 +12,7 @@ document.querySelector("#rforgot").addEventListener("click",(e) => {
     arr.push(signUpdata)
     console.log('arr:', arr)
     localStorage.setItem("signUpdatabase",JSON.stringify(arr));
+    alert("Registeration Successfull");
     window.location.href="signin.html"
 
 })
