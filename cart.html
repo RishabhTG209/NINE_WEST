@@ -7,8 +7,11 @@
     <title>Your Shopping Bag | Nine West</title>
     <link rel = "icon" href = "https://lh3.googleusercontent.com/vOkdv6GWvUCyLLjzjSUrewsZRJHylWCMhT9eYX6q8AEMZ_Tfk942Ur7OkAmobVZ2Ag"  type = "image/x-icon">
     <link rel="stylesheet" href="./Style/cart.css">
+    <link rel="stylesheet" href="./Style/navbar.css">
+    <script src="https://kit.fontawesome.com/683b4b40e3.js" 	crossorigin="anonymous"></script>
 </head>
 <body>
+    <div id="rrnavbar"></div>
     <div class="rshoppingbag"><p>SHOPPING BAG</p></div>
     <div id="rcartstatic">
         <div class="rproducts"><p>Products</p></div>
@@ -68,4 +71,9 @@
     document.querySelector(".rcheckout").addEventListener("click",function(){
         window.location.href="checkout.html"
     })
+</script>
+<script type="module">
+
+    import navbar from "./Scripts/navbar.js";
+    document.querySelector("#rrnavbar").innerHTML=navbar();
 </script>

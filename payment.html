@@ -69,7 +69,7 @@
             </div>
             <div class="rcreturn">
                 <a href="shipping.html"><p>< Return to Shipping</p></a>
-                <button>Pay Now</button>
+                <button id="rpaynow">Pay Now</button>
             </div>
             <div class="rcline"></div>
             <div class="rcpolicy">
@@ -111,3 +111,8 @@
     </div>
 </body>
 </html>
+<script>
+    document.querySelector("#rpaynow").addEventListener("click",function(){
+        window.location.href="thankyou.html"
+    })
+</script>
