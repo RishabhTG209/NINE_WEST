@@ -119,6 +119,23 @@ body{
     margin-left: 1%;
     font-size: 15px;
 }
+#rsnameinside div input{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 30px;
+}
+#rsnameinside div div{
+    display: flex;
+    justify-content: space-between;
+}
+#rsnameinside div div input{
+    display: flex;
+    width: 25%;
+    margin-right: 9%;
+    margin-bottom: 5%;
+}
 .rsblack{
     color: black;
     font-size: 15px;
