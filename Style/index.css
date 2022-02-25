@@ -1,4 +1,4 @@
-/* * {box-sizing: border-box;} */
+* {box-sizing: border-box;}
 body{
     margin: 0% .3%;
     margin: auto;
@@ -147,13 +147,6 @@ body{
     margin-right: 1%;
     background-color: #ded9e4; 
 }
-/* .big{
-   
-    height:3000px ;
-    width: 1470px;
-   margin-left: 1%;
-   
-} */
 .big2{
      
     height: 600px;
