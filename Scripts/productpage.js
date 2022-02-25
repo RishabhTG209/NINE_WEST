@@ -1,13 +1,26 @@
-var cartData = JSON.parse(localStorage.getItem('heelsData'))
-// console.log('cartData:', cartData)
-cartDataAppend(cartData)
+var item = JSON.parse(localStorage.getItem('IndividualProduct'))
+console.log("hey hey ",item[item.length-1])
+fetchdata(item[item.length-1])
+    
+
+    async function fetchdata(item){
+        try{
+            let response=await fetch(
+                    `https://myapplication-nine-west.herokuapp.com/product/${item}`
+                );
+                data=await response.json();
+                // localData.push(data);
+                product(data);
+                console.log("Data: ",data);
+            
+        }        
+        catch(error){
+            console.log("Error : ",error);
+        }       
+}
 
 
-var cart =  JSON.parse(localStorage.getItem("cartdetails")) || []
-
-
-
-function cartDataAppend(data){
+function product(data){
 
     var pic1 = document.createElement('img')
     pic1.src = data.image1
@@ -21,7 +34,7 @@ function cartDataAppend(data){
     imageduplicate.src = data.image1
 
     var title = document.createElement('h2')
-    title.textContent = data.title
+    title.textContent = data.name
 
     var price = document.createElement('p')
     price.textContent = data.price

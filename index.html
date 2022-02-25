@@ -294,6 +294,7 @@
 </body>
 </html> 
 <script src="./Scripts/index.js"></script>
+<script src="./Scripts/debouncing.js"></script>
 <script type="module">
 
 import navbar from "./components/navbar.js";
@@ -301,6 +302,10 @@ import navbar from "./components/navbar.js";
 
     document.querySelector("#rsigninhover").addEventListener("click",function(){
         window.location.href="signin.html"
+    })
+    var searchinput=document.querySelector("#searchinput");
+            searchinput.addEventListener("input",function(){
+                debounce(searchList,1000);
     })
 
     import footer from "./components/footer.js";
