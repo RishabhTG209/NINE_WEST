@@ -345,11 +345,18 @@
 #handelcatgory,
 #handelprice {
   background-color: white;
-  font-size: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: 20px;
-  border: 1px solid gray;
+  font-size: 100%;
+  /* padding-right: 1%; */
+  /* margin-left: 5%; */
+  border: none;
+  /* border: 1px solid gray; */
+}
+#handelcolor{
+  margin-left:-2%
+}
+
+#lab{
+  margin-left: 33%;
 }
 
 #vheels {

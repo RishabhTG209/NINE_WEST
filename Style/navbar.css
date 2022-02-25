@@ -64,15 +64,13 @@ body {
   .fa-search {
     padding: 10px;
     font-size: 16px;
-    margin-top: 1%;
     border: 1px solid lightgray;
     cursor: pointer;
   }
-  .vioverlap input {
+  .vioverlap>input {
     width: 200px;
-    height: 16px;
-    margin-top: 1%;
-    padding: 10px;
+    height: 40px;
+    padding-left: 10px;
     border: 1px solid lightgray;
   }
   #vilogocart {
