@@ -6,7 +6,8 @@ fetchdata(item[item.length-1])
     async function fetchdata(item){
         try{
             let response=await fetch(
-                    `https://myapplication-nine-west.herokuapp.com/product/${item}`
+                    // `https://myapplication-nine-west.herokuapp.com/product/${item}`
+                    `https://blooming-refuge-71619.herokuapp.com/products/${item}`
                 );
                 data=await response.json();
                 // localData.push(data);
