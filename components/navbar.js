@@ -1,12 +1,19 @@
 function navbar(){
-    return `<div id="vicontainer">
+    return `<div id="vimainnavbar"><div id="vicontainer">
     <div id="vinavleft">
         <a href="index.html"><img src="https://cdn.shopify.com/s/files/1/0267/3737/7324/files/NineWest_240x40_ec01f287-6403-4e74-9564-213d2f46089b_400x.jpg?v=1585845052" alt=""></a>
     </div>
     <div></div>
     <div id="vilogin">
         <div id="vireward"><a href="#">JOIN 9W REWARDS</a></div>
-        <div id="rsigninhover"> <a href="#">SIGN IN</a></div>
+        <div id="rsigninhover"> <a href="signin.html">SIGN IN</a>
+            <div id="ruserhover">
+                <a href="signin.html">SIGN IN</a>
+                <a href="signin.html">SIGN IN</a>
+                <a href="signin.html">SIGN IN</a>
+                <a href="signin.html">SIGN IN</a>
+            </div>
+        </div>
         <div id="viless">FREE SHIPPING ORDERS $60+</div>
     </div>
  </div>
@@ -415,6 +422,7 @@ function navbar(){
         
     </div>
     
+</div>
 </div>`
 }
 

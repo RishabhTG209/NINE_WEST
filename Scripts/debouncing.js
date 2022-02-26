@@ -6,8 +6,9 @@ async function searchList(){
     let searched=document.querySelector("#searchinput").value;
     try{
         let response1 =await fetch(
-            `https://www.themealdb.com/api/json/v1/1/search.php?s=${searched}`
-            // `https://blooming-refuge-71619.herokuapp.com/productlist?category=${searched}`
+            // `https://www.themealdb.com/api/json/v1/1/search.php?s=${searched}`
+            `https://blooming-refuge-71619.herokuapp.com/productlist/${searched}`
+            // `http://localhost:3125/productlist/${searched}`
         );
         let data1=await response1.json();
         console.log("Data1 : ",data1);

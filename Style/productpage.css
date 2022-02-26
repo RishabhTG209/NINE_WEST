@@ -6,6 +6,7 @@ body{
     /* border: 1px solid red; */
     display: flex;
     justify-content: space-between;
+    margin-top: 8%;
     margin-bottom: 2%;
     font-size: 11.5px;
 }

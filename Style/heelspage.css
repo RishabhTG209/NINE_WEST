@@ -17,6 +17,7 @@
 #container {
   width: 95%;
   margin: auto;
+  margin-top: 15%;
   /* border: 1px solid yellow; */
 }
 
@@ -332,9 +333,9 @@
   justify-content: space-around;
 }
 
-#vcombination {
+/* #vcombination {
   margin-top: 50px;
-}
+} */
 
 #lab,
 #handelcolor,
@@ -350,6 +351,7 @@
   /* margin-left: 5%; */
   border: none;
   /* border: 1px solid gray; */
+
 }
 #handelcolor{
   margin-left:-2%

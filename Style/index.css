@@ -8,6 +8,7 @@ body{
 
 .rfirstphoto img{
   width: 100%;
+  margin-top: 7%;
 }
 
 /* Slideshow container */
@@ -148,20 +149,22 @@ body{
     background-color: #ded9e4; 
 }
 .big2{
-     
     height: 600px;
     display: flex;
     background-color:#f2f2f3;
 }
 .bigwords{
-    text-align: center;
+    line-height:25px;
+    text-align: left;
     margin-left: 5%;
-    margin-top: 30%;
+    margin-top: 23%;
+
 }
 .bigwords1{
-    text-align: center;
-    margin-left: 4%;
-    margin-top: 30%;
+  line-height: 25px;
+    text-align: left;
+    margin-left: 6%;
+    margin-top: 25%;
 }
 .last{
     

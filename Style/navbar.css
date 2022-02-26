@@ -4,7 +4,17 @@ body {
   }
   
   /* NAVBAR */
+  #vimainnavbar{
+    /* border: 1px solid red; */
+    background-color: white;
+    width: 100%;
+    height: 125px;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+  }
   #vicontainer {
+    /* border: 1px solid red; */
     display: flex;
     gap: 10px;
     width: 90%;
@@ -20,7 +30,7 @@ body {
   }
   #vinavleft a img {
     margin-top: 1.3%;
-    margin-left: 1%;
+    margin-left: 3.5%;
   }
   #vilogin {
     display: flex;
@@ -28,6 +38,7 @@ body {
     justify-content: end;
     align-items: center;
   }
+
   #vilogin > div {
     /* font-size: 16px; */
     font-weight: 500;
@@ -38,9 +49,26 @@ body {
   #rsigninhover {
     cursor: pointer;
     font-weight: 600;
+    /* display: none; */
+  }
+  #rsigninhover>div{
+    display: none;
   }
   #rsigninhover > a {
     text-decoration: none;
+  }
+  #rsigninhover:hover>div{
+    display: block;
+  }
+  #ruserhover a{
+    font-size: 14px;
+    color: lightgrey;
+    text-decoration: none;
+  }
+  #ruserhover>a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    transition:1s
   }
   #viless {
     font-size: 13px;
@@ -51,7 +79,8 @@ body {
   
   #vinavrightsearch {
     display: flex;
-    margin-left: 15%;
+    /* margin-right: 0%; */
+    margin-left: 20%;
   }
   .vioverlap {
     display: flex;
@@ -86,7 +115,7 @@ body {
   #vilogocart i {
     font-size: 20px;
     color: black;
-    margin-right: 15%;
+    margin-right: 30%;
     margin-top: 10%;
     cursor: pointer;
   }
@@ -248,9 +277,13 @@ body {
   #viinputTab input:focus {
     outline: none;
   }
+
+  #searchinput{
+    width:250px
+  }
   
-  .sticky {
+  /* .sticky {
     position: fixed;
     top: 0;
     width: 100%;
-  }
+  } */
