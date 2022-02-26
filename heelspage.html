@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./Style/heelspage.css">
     <link rel="stylesheet" href="./Style/navbar.css">
     <link rel="stylesheet" href="./Style/footer.css">
+    <link rel="stylesheet" href="./Style/debouncing.css">
     <style>
         #vnavbar {
             display: flex;
@@ -61,6 +62,7 @@
     <div id="rrnavbar">
         <!--  Nav Bar -->
     </div>
+    <div id="check"></div>
 
     <div id="container">
 
@@ -135,6 +137,7 @@
 </html>
 
 <script src="./Scripts/data.js"></script>
+<script src="./Scripts/debouncing.js"></script>
 <script type="module">
 
     import navbar from "./components/navbar.js";
@@ -146,6 +149,13 @@
 
     import footer from "./components/footer.js";
     document.querySelector("#rrfooter").innerHTML = footer();
+
+    var searchinput=document.querySelector("#searchinput");
+            searchinput.addEventListener("input",function(){
+                debounce(searchList,1000);
+    })
+
+
 </script>
 
 <script>

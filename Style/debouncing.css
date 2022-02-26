@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap');
+
+#check{
+    margin-top: -3%;
+    margin-bottom:5%;
+    margin-left: 21.5%;
+    overflow: hidden;
+    overflow-y: scroll;
+    width: 34%;
+    /* height: 250px; */
+    /* max-height: 250px; */
+    background-color: rgb(246,246,246);
+    /* border: 1px solid red; */
+
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,.25);
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-color: goldenrod;
+
+}
+
+.divlist{
+    display: flex;
+    border-bottom:1px solid lightgrey;
+    font-family: 'Merienda', cursive;
+    color: goldenrod;
+    cursor: pointer;
+}
+.divlist:hover{
+    background-color: black;
+    /* color: white; */
+    transition: .8s;
+    padding: 4px;
+}
+.dishlistphoto{
+    /* margin-left: 2%; */
+    width: 80px;
+    border-radius: 5px;
+    margin-top: 1%;
+}
+.dishlistname{
+    margin-left: 2%;
+    font-size: 22px;
+}
+

@@ -1,12 +1,13 @@
 let listWaiting;
+let check=document.querySelector("#check");
 async function searchList(){
     
     // list_div.innerHTML="";
     let searched=document.querySelector("#searchinput").value;
     try{
         let response1 =await fetch(
-            // `https://www.themealdb.com/api/json/v1/1/search.php?s=${searched}`
-            `https://blooming-refuge-71619.herokuapp.com/productlist?category=${searched}`
+            `https://www.themealdb.com/api/json/v1/1/search.php?s=${searched}`
+            // `https://blooming-refuge-71619.herokuapp.com/productlist?category=${searched}`
         );
         let data1=await response1.json();
         console.log("Data1 : ",data1);
@@ -21,28 +22,27 @@ async function searchList(){
 function appendList(product){
     
     product.forEach(elem=>{
-        // p=document.createElement("p");
-        // p.innerText=elem.Title;
-        // p.setAttribute("class","listP");
-        // // p.addEventListener("click", function () {
-        // //     console.log("hey3: ",elem);
-        // //   removemovie()  
-        // //   searchList(elem);
-        // // });
-        // let poster1=document.createElement("img");
-        // poster1.src=elem.Poster;
-        // poster1.setAttribute("class","listPoster");
-        // // poster1.addEventListener("click", function () {
-        // //     console.log("hey3: ",elem);
-        // //   removemovie()  
-        // //   fetchdata(elem);
-        // // });
-        // divflex=document.createElement("div")
-        // divflex.setAttribute("class","divflex");
-        // divflex.append(poster1,p);
-        // movies_div.append(divflex);
-        // document.querySelector("#check").append(movies_div);
-        console.log(elem)
+        let divlist=document.createElement("div");
+        divlist.setAttribute("class","divlist")
+        let dishlistname=document.createElement("p");
+        dishlistname.textContent=elem.strMeal;
+        dishlistname.setAttribute("class","dishlistname");
+
+        divlist.addEventListener("click", function () {
+            console.log("hey3: ",elem);
+            showData(elem);
+        });
+        document.querySelector("#searchinput").addEventListener("keypress",function(){
+            if(event.key=='Enter'){
+                    showData(elem);
+                }
+        });
+        let listimage=document.createElement("img");
+        listimage.src=elem.strMealThumb;
+        listimage.setAttribute("class","dishlistphoto");
+        divlist.append(listimage,dishlistname);
+        check.append(divlist);
+        // console.log(elem)
     })
     p.innerText="";
 
