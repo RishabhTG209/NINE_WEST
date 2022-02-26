@@ -6,7 +6,7 @@ function navbar(){
     <div></div>
     <div id="vilogin">
         <div id="vireward"><a href="#">JOIN 9W REWARDS</a></div>
-        <div id="rsigninhover"> <a href="signin.html">SIGN IN</a>
+        <div id="rsigninhover"> <a id="rnamechange" href="signin.html">SIGN IN</a>
             <div id="ruserhover">
                 <a href="signin.html">SIGN IN</a>
                 <a href="signin.html">SIGN IN</a>
@@ -417,7 +417,7 @@ function navbar(){
         </div>
         <div id="vilogocart">
             <i class="fas fa-heart"></i>
-            <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
+            <a id="rrcartlogo"><i class="fas fa-shopping-bag"></i></a>
         </div>
         
     </div>

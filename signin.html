@@ -25,12 +25,14 @@
         </div>
         <div id="rform">
             <div id="rinputpart">
+                <form action="">
                 <div><label for="">EMAIL ADDRESS*</label></div>
-                <div><input class="email" type="text" placeholder="Email address"></div>
+                <div><input id="rloginemail" class="email" type="text" placeholder="Email address"></div>
                 <div><label for="">PASSWORD*</label></div>
-                <div><input class="pass" type="text" placeholder="Password"></div>
+                <div><input id="rloginpassword"class="password" type="password" placeholder="Password"></div>
+            </form>
                 <div id="rforgot">
-                    <button>SIGN IN</button>
+                    <button id="rrloginbutton">SIGN IN</button>
                     <p>FORGOT YOUR PASSWORD?</p>
                 </div>
                 <p>NEW CUSTOMER?<a class="rsignupwrite" href="signup.html">SIGN UP</a></p>
@@ -53,10 +55,28 @@
 import navbar from "./components/navbar.js";
     document.querySelector("#rrnavbar").innerHTML=navbar();
 
+    var currentUser = JSON.parse(localStorage.getItem('currentUser'))
+    if(currentUser!=""){
+        document.querySelector("#rnamechange").textContent=`Hello, ${currentUser.user_data.first_name}`;
+    }
     document.querySelector("#rsigninhover").addEventListener("click",function(){
         window.location.href="signin.html"
     })
 
+    document.querySelector("#rrloginbutton").addEventListener("click",function(){
+        
+        Login(event);
+        // alert("Login Successfully!");
+    })
+
+    document.querySelector("#rrcartlogo").addEventListener("click",function(){
+        if(currentUser!=""){    
+            window.location.href="cart.html"
+        }
+        else{
+            alert("You need to Login First");
+        }
+    })
     import footer from "./components/footer.js";
     document.querySelector("#rrfooter").innerHTML=footer();
 </script>

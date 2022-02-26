@@ -127,6 +127,10 @@ body{
     background-color: grey;
     transition: 1s;
 }
+.rrempty{
+    width:100%;
+    cursor: pointer;
+}
 /* .rcartpayoption{
     border: 1px solid red;
     height: 50px;

@@ -209,7 +209,29 @@ import navbar from "./components/navbar.js";
             searchinput.addEventListener("input",function(){
                 debounce(searchList,1000);
     })
+    
+    var currentUser = JSON.parse(localStorage.getItem('currentUser'))
+    document.querySelector("#rrcartlogo").addEventListener("click",function(){
+        if(currentUser!=""){    
+            window.location.href="cart.html"
+        }
+        else{
+            alert("You need to Login First");
+        }
+    })
 
+    if(currentUser!=""){
+        document.querySelector("#rnamechange").textContent=`Hello, ${currentUser.user_data.first_name}`;
+    }
+    
     import footer from "./components/footer.js";
     document.querySelector("#rrfooter").innerHTML=footer();
+
+
+    // document.querySelector("body").addEventListener("onclick",function(){
+        // var abc=document.querySelector("#check")
+        // document.querySelector("#check").onclick=function(){
+        //     abc.style.display="none";
+        // }
+    // })
 </script>

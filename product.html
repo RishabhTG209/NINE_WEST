@@ -244,10 +244,21 @@
 import navbar from "./components/navbar.js";
     document.querySelector("#rrnavbar").innerHTML=navbar();
 
+    var currentUser = JSON.parse(localStorage.getItem('currentUser'))
+    if(currentUser!=""){
+        document.querySelector("#rnamechange").textContent=`Hello, ${currentUser.user_data.first_name}`;
+    }
     document.querySelector("#rsigninhover").addEventListener("click",function(){
         window.location.href="signin.html"
     })
-
+    document.querySelector("#rrcartlogo").addEventListener("click",function(){
+        if(currentUser!=""){    
+            window.location.href="cart.html"
+        }
+        else{
+            alert("You need to Login First");
+        }
+    })
     import footer from "./components/footer.js";
     document.querySelector("#rrfooter").innerHTML=footer();
 </script>

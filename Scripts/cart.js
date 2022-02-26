@@ -1,16 +1,51 @@
 
 // document.querySelector("#rsubtotalprice").append(total);
-let cartitems = JSON.parse(localStorage.getItem("cartdetails"))
-console.log('cartitems:', cartitems)
-appendcart(cartitems)
-let main=document.querySelector("#rcartdyanamic");
-let subtotalprice=document.querySelector("#rsubtotalprice")
+// let cartitems = JSON.parse(localStorage.getItem("cartdetails"))
+// console.log('cartitems:', cartitems)
+// appendcart(cartitems)
+// let main=document.querySelector("#rcartdyanamic");
+// let subtotalprice=document.querySelector("#rsubtotalprice")
 var totalprice_cart
+
+
+
+var currentUser = JSON.parse(localStorage.getItem('currentUser'))   // completed user ID
+
+cartFetch();
+
+
+async function cartFetch(){
+    try{
+        let response=await fetch(
+                // `https://myapplication-nine-west.herokuapp.com/product/${item}`
+                `https://blooming-refuge-71619.herokuapp.com/cart/${currentUser.user_data._id}`
+            );
+            data=await response.json();
+                appendCart(data);
+            console.log("Data: ",data);
+        
+    }        
+    catch(error){
+        console.log("Error : ",error);
+    } 
+}
+
 
 let final=[]||JSON.parse(localStorage.getItem("finalprice"));
 
 
-function appendcart(elem){
+function appendCart(elem){
+  console.log(elem)
+  document.querySelector("#rcartdyanamic").innerHTML=null;
+  if(elem.length==0){
+    let imgempty= document.createElement("img");
+    imgempty.src="https://community.servicenow.com/bbd560d3dbc0c41013b5fb24399619d2.iix"
+    imgempty.setAttribute("class","rrempty")
+    document.querySelector("#rcartdyanamic").append(imgempty);
+    imgempty.addEventListener("click",function(){
+      window.location.href="heelspage.html"
+    })
+  }
     totalprice_cart=0;
     elem.map((el,index)=>{
         
@@ -36,7 +71,7 @@ function appendcart(elem){
                 div14.setAttribute("class","rdisplay");
 
                 let p1=document.createElement("p");
-                p1.textContent=el.title;
+                p1.textContent=el.product_id.name;
                 let p11=document.createElement("p");
                 p11.textContent="Size : 5";
                 let p12=document.createElement("p");
@@ -44,7 +79,7 @@ function appendcart(elem){
                 let p13=document.createElement("p");
                 p13.textContent="Color : Black";
                 let p14=document.createElement("button");
-                p14.textContent="Delete"
+                p14.textContent="Delete";
                 div11.append(p11);
                 div12.append(p12);
                 div13.append(p13);
@@ -52,31 +87,37 @@ function appendcart(elem){
             
                 div1.append(p1,div11,div12,div13,div14);
                 p14.addEventListener("click",function(){
-                    deleteItem(index);
+                    deleteItem(el.product_id._id);
                 })
 
 
                 let img1=document.createElement("img");
-                img1.src=el.image1;
+                img1.src=el.product_id.image1;
                 imgname.append(img1,div1);
                 product.append(imgname);
 
                 let p21=document.createElement("p");
-                p21.textContent=`$ ${el.price}.00`;
+                p21.textContent=`$ ${el.product_id.price}.00`;
                 price.append(p21);
 
                 let p31=document.createElement("button");
                 p31.textContent="-";
+                p31.addEventListener("click",function(){
+                    subtoCart(el.product_id._id);
+                })
                 let p32=document.createElement("p");
-                p32.textContent="1";
+                p32.textContent=el.qty;
                 let p33=document.createElement("button");
                 p33.textContent="+";
+                p33.addEventListener("click",function(){
+                    addtoCart(el.product_id._id);
+                })
                 quantity.append(p31,p32,p33);
 
                 let p41=document.createElement("p");
-                p41.textContent=`$ ${el.price}.00`;
+                p41.textContent=`$${el.product_id.price*el.qty}.00`;
                 total.append(p41);
-                totalprice_cart+=(+el.price);
+                totalprice_cart+=(+el.product_id.price*el.qty);
                 
 
                 let divfinal=document.createElement("div");               
@@ -84,20 +125,125 @@ function appendcart(elem){
                 divfinal.setAttribute("id","divfinal");
                 document.querySelector("#rcartdyanamic").append(divfinal);
     })
-    document.querySelector("#rsubtotalprice").append(`$ ${totalprice_cart}`);   
+    document.querySelector("#rsubtotalprice").append(`$${totalprice_cart}.00`);   
 }
 
-
-function deleteItem(index){
-    cartitems.splice(index,1);
-    localStorage.setItem("cartdetails",JSON.stringify(cartitems));
-    main.innerHTML="";
-    subtotalprice.innerHTML=""
-    appendcart(cartitems);         
-}
 
 document.querySelector(".rcheckout").addEventListener("click",function(){
     final.push(totalprice_cart);
     localStorage.setItem('finalprice', JSON.stringify(final))
     window.location.href="checkout.html"
 })
+
+
+
+
+
+async function addtoCart(productID){
+
+    try{
+    
+    //   console.log("inside")
+    //    e.preventDefault();
+    
+       var cart_data = {
+         user_id:currentUser.user_data._id,         
+         product_id:productID            
+       }
+    
+    // console.log(cart_data)
+       cart_data=JSON.stringify(cart_data)
+       console.log("hey abcd:",cart_data)
+    
+    }catch(err){
+    
+    console.log(err)
+    }
+    
+    let reg_api = `https://blooming-refuge-71619.herokuapp.com/cart/additem/${currentUser.user_data._id}`
+    
+    let responce = await fetch(reg_api,{
+      method:"POST",
+      body:cart_data,
+      headers:{
+        "Content-Type":"application/json",
+      },
+    });
+    // let data = await responce.json();
+    // appendCart(data);
+    location.reload();   
+    // console.log("data",data)
+}
+
+
+async function subtoCart(productID){
+
+    try{
+    
+    //   console.log("inside")
+    //    e.preventDefault();
+    
+       var cart_data = {
+         user_id:currentUser.user_data._id,         
+         product_id:productID            
+       }
+    
+    // console.log(cart_data)
+       cart_data=JSON.stringify(cart_data)
+       console.log("hey abcd:",cart_data)
+    
+    }catch(err){
+    
+    console.log(err)
+    }
+    
+    let reg_api = `https://blooming-refuge-71619.herokuapp.com/cart/additem/${currentUser.user_data._id}?operation=dec`
+    
+    let responce = await fetch(reg_api,{
+      method:"POST",
+      body:cart_data,
+      headers:{
+        "Content-Type":"application/json",
+      },
+    });
+    // let data = await responce.json();
+    // appendCart(data);
+    location.reload();   
+    // console.log("data",data)
+}
+
+async function deleteItem(productID){
+
+    try{
+    
+    //   console.log("inside")
+    //    e.preventDefault();
+    
+       var cart_data = {
+         user_id:currentUser.user_data._id,         
+         product_id:productID            
+       }
+    
+    // console.log(cart_data)
+       cart_data=JSON.stringify(cart_data)
+       console.log("hey abcd:",cart_data)
+    
+    }catch(err){
+    
+    console.log(err)
+    }
+    
+    let reg_api = `https://blooming-refuge-71619.herokuapp.com/cart/${productID}`
+    
+    let responce = await fetch(reg_api,{
+      method:"DELETE",
+      body:cart_data,
+      headers:{
+        "Content-Type":"application/json",
+      },
+    });
+    // let data = await responce.json();
+    // appendCart(data);
+    location.reload();   
+    // console.log("data",data)
+}

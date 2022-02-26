@@ -31,15 +31,15 @@
         <div id="rform">
             <div id="rinputpart">
                 <div><label for="">FIRST NAME</label></div>
-                <div><input type="text" placeholder="First Name"></div>
+                <div><input type="text" id="f_name" placeholder="First Name"></div>
                 <div><label for="">LAST NAME</label></div>
-                <div><input type="text" placeholder="Last Name"></div>
+                <div><input type="text" id="l_name"placeholder="Last Name"></div>
                 <div><label for="">EMAIL ADDRESS*</label></div>
                 <div><input type="text" id="email" placeholder="Email Address*"></div>
                 <div><label for="">PASSWORD*</label></div>
-                <div><input type="text" id="password" placeholder="Password"></div>
+                <div><input type="password" id="password" placeholder="Password"></div>
                 <div id="rforgot">
-                    <button>SIGN UP</button>
+                    <button id="rsignupbutton">SIGN UP</button>
                     <p>* Indicates a Required field</p>
                 </div>
                 <p>RETURNING CUSTOMER?<a class="rsignupwrite" href="signin.html">LOGIN</a></p>
@@ -59,12 +59,31 @@
 <script src="https://kit.fontawesome.com/683b4b40e3.js" 	crossorigin="anonymous"></script>
 <script type="module">
 
-import navbar from "./components/navbar.js";
+    import navbar from "./components/navbar.js";
     document.querySelector("#rrnavbar").innerHTML=navbar();
 
     document.querySelector("#rsigninhover").addEventListener("click",function(){
         window.location.href="signin.html"
     })
+
+    var currentUser = JSON.parse(localStorage.getItem('currentUser'))
+    if(currentUser!=""){
+        document.querySelector("#rnamechange").textContent=`Hello, ${currentUser.user_data.first_name}`;
+    }
+    document.querySelector("#rsignupbutton").addEventListener("click",function(){
+        Register(event);
+        alert("SignUp Successfully!");
+        window.location.href="signin.html"
+    })
+    document.querySelector("#rrcartlogo").addEventListener("click",function(){
+        if(currentUser!=""){    
+            window.location.href="cart.html"
+        }
+        else{
+            alert("You need to Login First");
+        }
+    })
+
     import footer from "./components/footer.js";
     document.querySelector("#rrfooter").innerHTML=footer();
 </script>
