@@ -1,5 +1,7 @@
 let listWaiting;
 let check=document.querySelector("#check");
+
+
 async function searchList(){
     
     // list_div.innerHTML="";
@@ -12,8 +14,7 @@ async function searchList(){
         );
         let data1=await response1.json();
         console.log("Data1 : ",data1);
-        let list_arr=data1.Search;
-        appendList(list_arr);
+        appendList(data1);
     }
     catch(error){
         console.log("Error: ",error);
@@ -25,27 +26,33 @@ function appendList(product){
     product.forEach(elem=>{
         let divlist=document.createElement("div");
         divlist.setAttribute("class","divlist")
-        let dishlistname=document.createElement("p");
-        dishlistname.textContent=elem.strMeal;
-        dishlistname.setAttribute("class","dishlistname");
+        let productname=document.createElement("p");
+        productname.textContent=elem.name;
+        productname.setAttribute("class","productname");
+        let productprice=document.createElement("p");
+        productprice.textContent=`$${elem.price}.00`;
+        productprice.setAttribute("class","productprice");
+        let divnameprice=document.createElement("div");
+        divnameprice.setAttribute("class","divnameprice")
+        divnameprice.append(productname,productprice)
 
-        divlist.addEventListener("click", function () {
-            console.log("hey3: ",elem);
-            showData(elem);
-        });
-        document.querySelector("#searchinput").addEventListener("keypress",function(){
-            if(event.key=='Enter'){
-                    showData(elem);
-                }
-        });
-        let listimage=document.createElement("img");
-        listimage.src=elem.strMealThumb;
-        listimage.setAttribute("class","dishlistphoto");
-        divlist.append(listimage,dishlistname);
+        // divlist.addEventListener("click", function () {
+        //     console.log("hey3: ",elem);
+        //     showData(elem);
+        // });
+        // document.querySelector("#searchinput").addEventListener("keypress",function(){
+        //     if(event.key=='Enter'){
+        //             showData(elem);
+        //         }
+        // });
+        let productimage=document.createElement("img");
+        productimage.src=elem.image;
+        productimage.setAttribute("class","productphoto");
+        divlist.append(productimage,divnameprice);
         check.append(divlist);
         // console.log(elem)
     })
-    p.innerText="";
+    // check.innerText="";
 
 }
 

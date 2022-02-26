@@ -12,49 +12,7 @@
     <link rel="stylesheet" href="./Style/heelspage.css">
     <link rel="stylesheet" href="./Style/navbar.css">
     <link rel="stylesheet" href="./Style/footer.css">
-    <link rel="stylesheet" href="./Style/debouncing.css">
-    <style>
-        #vnavbar {
-            display: flex;
-            justify-content: space-around;
-        }
-
-        #vcombination {
-            margin-top: 50px;
-        }
-
-        #lab,
-        #handelcolor,
-        #handelsize,
-        #handelwidth,
-        #handelwidth,
-        #handelheight,
-        #handelcatgory,
-        #handelprice {
-            background-color: white;
-            font-size: 20px;
-            padding-left: 10px;
-            padding-right: 10px;
-            margin-left: 20px;
-            /* border: 1px solid red; */
-        }
-
-        #vheels {
-            display: grid;
-            grid-template-columns: auto auto auto auto;
-        }
-
-        #vbox{
-            border: 1px solid red;
-        }
-        img {
-            width: 100%;
-        }
-
-        .vtitle {
-            text-align: center;
-        }
-    </style>
+    <!-- <link rel="stylesheet" href="./Style/debouncing.css"> -->
     <script src="https://kit.fontawesome.com/683b4b40e3.js" crossorigin="anonymous"></script>
 </head>
 
@@ -62,7 +20,7 @@
     <div id="rrnavbar">
          <!-- Nav Bar -->
     </div>
-    <div id="check"></div>
+    <!-- <div id="check"></div>          for Debouncing-->
 
     <div id="container">
 
@@ -109,9 +67,9 @@
 
             <select name="" id="handelprice" onchange="handelprice()">
                 <option value="">Price</option>
-                <option value="89.00">Under$109</option>
-                <option value="109.00">Under$170</option>
-                <option value="209.00">Under$260</option>
+                <option value="250">Under$250</option>
+                <option value="500">Under$500</option>
+                <option value="1000">Under$1000</option>
             </select>
 
             <select name="" id="lab" onchange="handelpriceshort()">
@@ -137,7 +95,7 @@
 </html>
 
 <script src="./Scripts/data.js"></script>
-<script src="./Scripts/debouncing.js"></script>
+<!-- <script src="./Scripts/debouncing.js"></script> -->
 <script type="module">
 
     import navbar from "./components/navbar.js";
@@ -150,17 +108,17 @@
     import footer from "./components/footer.js";
     document.querySelector("#rrfooter").innerHTML = footer();
 
-    var searchinput=document.querySelector("#searchinput");
-            searchinput.addEventListener("input",function(){
-                debounce(searchList,1000);
-    })
+    // var searchinput=document.querySelector("#searchinput");
+    //         searchinput.addEventListener("input",function(){
+    //             debounce(searchList,1000);
+    // })
 
 
 </script>
 
 <script>
     var individual = [];
-    let i=0;
+    let i=0,j=0;
     fetchdata()
     
 
@@ -308,20 +266,35 @@
 
         console.log(Selected)
 
-        if (Selected != "") {
+        if (Selected == "250") {
 
-            let newdata = data.filter(function (el) {
-
-                if (el.price > 70 && el.price < 120) {
-                    return el.price;
+            let newdata = price.map((el)=> {
+                if (el.price > 0 && el.price < 250) {
+                    return el;
                 }
-                // return el.price==Selected
             })
+            console.log(newdata);
             showProduct(newdata)
 
-        } else {
-            showProduct(data)
-
+        }
+        else if(Selected == "500"){
+            let newdata = price.map((el)=> {
+                if (el.price >=250 && el.price < 500) {
+                    return el;
+                }
+            })
+            showProduct(newdata)
+        } 
+        else if(Selected == "1000"){
+            let newdata = price.map((el)=> {
+                if (el.price >=500 && el.price < 1000) {
+                    return el;
+                }
+            })
+            showProduct(newdata)
+        }
+        else {
+            showProduct(price)
         }
     }
 
@@ -358,32 +331,19 @@
             div.append(div1,div2);
             document.querySelector("#vheels").append(div);
 
-            if(i<=5){
+            if(i<=2){
                 document.querySelector("#lab").addEventListener("change",function(){
                     i++;
                     handelpriceshort(data)
                 })
             }
+            // if(j<=2){
+            //     document.querySelector("#handelprice").addEventListener("change",function(){
+            //         j++;
+            //         handelprice(data)
+            //     })
+            // }
         })
-
-
-        // var htmlstring = ""
-
-        // for (let i = 0; i < data.length; i++) {
-        //     htmlstring = htmlstring + `<div id="vbox">
-        //         <div id="vnameis">
-        //             <img src="${data[i]["image1"]}">
-        //             <p class="vtitle">${data[i]["name"]}</p>
-        //             <p class="vtitle">${"$" + data[i]["price"]}</p>
-        //         </div>
-        //     </div>`;
-        // }
-        // // document.querySelector("#vnameis").addEventListener("click",function(){
-        // //     console.log(`hey hey hye ${data[i].name}`)
-        // // })
-
-        // var vheels = document.getElementById('vheels');
-        // vheels.innerHTML = htmlstring;
 
     }
 

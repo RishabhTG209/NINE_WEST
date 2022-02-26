@@ -2,14 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap');
 
 #check{
-    margin-top: -3%;
-    margin-bottom:5%;
-    margin-left: 21.5%;
+    /* position: relative; */
+    /* margin: auto; */
+    /* margin-right: 9%; */
+    margin-left: 72%;
+    margin-top: 8%;
+    font-family: "FuturaLTPro-Book",Sans-Serif!important;    
+    
     overflow: hidden;
     overflow-y: scroll;
-    width: 34%;
+    position: absolute;
+    width: 21%;
     /* height: 250px; */
-    /* max-height: 250px; */
+    z-index: 5;
+    max-height: 200px;
     background-color: rgb(246,246,246);
     /* border: 1px solid red; */
 
@@ -24,31 +30,38 @@
 }
 ::-webkit-scrollbar-thumb{
     border-radius: 5px;
-    background-color: goldenrod;
+    background-color: rgba(0, 0, 0, 0.185)
 
 }
 
 .divlist{
     display: flex;
     border-bottom:1px solid lightgrey;
-    font-family: 'Merienda', cursive;
-    color: goldenrod;
+    /* font-family: 'Merienda', cursive; */
     cursor: pointer;
 }
-.divlist:hover{
-    background-color: black;
-    /* color: white; */
-    transition: .8s;
-    padding: 4px;
-}
-.dishlistphoto{
+
+.productphoto{
     /* margin-left: 2%; */
-    width: 80px;
-    border-radius: 5px;
-    margin-top: 1%;
-}
-.dishlistname{
-    margin-left: 2%;
-    font-size: 22px;
+    width: 50px;
+    height: 50px;
+    /* border-radius: 5px; */
+    margin: 5% 1% 0% 1%;
 }
 
+.productname{
+    color: rgb(22, 34, 34);
+    font-weight: bold;
+    margin-left: 2%;
+    font-size: 14px;
+}
+.productname:hover,.productprice:hover{
+    color: grey;
+    transition:.8s;
+}
+.productprice{
+    font-size:12px;
+    margin-top:-5%;
+    margin-left: 2%;
+    font-weight: bold;
+}
