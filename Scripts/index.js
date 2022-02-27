@@ -1,3 +1,10 @@
+var currentUser = JSON.parse(localStorage.getItem("currentUser"))||""
+if(currentUser==undefined ||currentUser==null || currentUser==""){
+    localStorage.setItem("currentUser",JSON.stringify(""))
+}
+
+
+
 var slideIndex = 0;
 showSlides();
 
