@@ -8,10 +8,10 @@ function navbar(){
         <div id="vireward"><a href="#">JOIN 9W REWARDS</a></div>
         <div id="rsigninhover"> <a id="rnamechange" href="signin.html">SIGN IN</a>
             <div id="ruserhover">
-                <a href="signin.html">SIGN IN</a>
-                <a href="signin.html">SIGN IN</a>
-                <a href="signin.html">SIGN IN</a>
-                <a href="signin.html">SIGN IN</a>
+                <a id="rhoversigninbutton" href="signin.html">SIGN IN</a>
+                <a href="#">TRACK AN ORDER</a>
+                <a href="#">RETURN AN ITEM</a>
+                <a href="#">CUSTOMER SERVICE</a>
             </div>
         </div>
         <div id="viless">FREE SHIPPING ORDERS $60+</div>

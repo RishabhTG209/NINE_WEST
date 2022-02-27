@@ -57,7 +57,16 @@ import navbar from "./components/navbar.js";
 
     var currentUser = JSON.parse(localStorage.getItem('currentUser'))
     if(currentUser!=""){
-        document.querySelector("#rnamechange").textContent=`Hello, ${currentUser.user_data.first_name}`;
+        document.querySelector("#rnamechange").textContent=`Welcome, ${currentUser.user_data.first_name}`;
+        let logoutbutton = document.createElement("a");
+        logoutbutton.textContent= "SIGN OUT";
+        document.querySelector("#ruserhover").append(logoutbutton);
+        document.querySelector("#rhoversigninbutton").style.display="none";
+        logoutbutton.addEventListener("click",function(){
+            localStorage.setItem('currentUser', JSON.stringify(""))  
+            alert("Sign Out Successfully");
+            window.location.href="signin.html";
+        })
     }
     document.querySelector("#rsigninhover").addEventListener("click",function(){
         window.location.href="signin.html"

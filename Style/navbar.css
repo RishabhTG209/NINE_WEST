@@ -53,22 +53,33 @@ body {
   }
   #rsigninhover>div{
     display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border: none;
   }
   #rsigninhover > a {
     text-decoration: none;
   }
   #rsigninhover:hover>div{
     display: block;
+    display: flex;
+    flex-direction: column;
+    width:12%;
   }
   #ruserhover a{
-    font-size: 14px;
-    color: lightgrey;
+    margin-top: 3%;
+    font-size: 12px;
+    font-weight: bold;
     text-decoration: none;
+    color: lightgrey;
+    padding: 5%;
   }
   #ruserhover>a:hover{
     cursor: pointer;
     text-decoration: underline;
-    transition:1s
+    transition:.6s;
+    color: grey;
   }
   #viless {
     font-size: 13px;

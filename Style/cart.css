@@ -131,6 +131,22 @@ body{
     width:100%;
     cursor: pointer;
 }
+.rdeleteButton{
+    margin-top:2%;
+    margin-bottom:2%;
+    padding:2.5%;
+    background-color:black;
+    border: none;
+    color: white;
+    border-radius:5px;
+}
+.rdeleteButton:hover{
+    transition:.5s;
+    background-color:white;
+    border: 1px solid black;
+    color: red;
+    cursor: pointer;
+}
 /* .rcartpayoption{
     border: 1px solid red;
     height: 50px;

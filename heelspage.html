@@ -103,7 +103,16 @@
     
     var currentUser = JSON.parse(localStorage.getItem('currentUser'))
     if(currentUser!=""){
-        document.querySelector("#rnamechange").textContent=`Hello, ${currentUser.user_data.first_name}`;
+        document.querySelector("#rnamechange").textContent=`Welcome, ${currentUser.user_data.first_name}`;
+        let logoutbutton = document.createElement("a");
+        logoutbutton.textContent= "SIGN OUT";
+        document.querySelector("#ruserhover").append(logoutbutton);
+        document.querySelector("#rhoversigninbutton").style.display="none";
+        logoutbutton.addEventListener("click",function(){
+            localStorage.setItem('currentUser', JSON.stringify(""))  
+            alert("Sign Out Successfully");
+            window.location.href="signin.html";
+        })
     }
     document.querySelector("#rsigninhover").addEventListener("click", function () {
         window.location.href = "signin.html"
@@ -325,10 +334,14 @@
                 sendData(elem._id);
             })
             div1.append(img);
+            div1.setAttribute("class","rimagediv")
 
             var p1 = document.createElement("p");
+            p1.setAttribute("class", "rprodname");
             var p2 = document.createElement("p");
+            p2.setAttribute("class", "rprodprice");
             var p3 = document.createElement("p");
+            p3.setAttribute("class", "rmorecolor");
             p1.textContent = elem.name;
             p1.addEventListener("click",function(){
                 sendData(elem._id);
@@ -341,6 +354,8 @@
 
             div2.append(p1,p2,p3);
             div.append(div1,div2);
+            div.setAttribute("class","rmainboxes")
+            div2.setAttribute("class","rwritten")
             document.querySelector("#vheels").append(div);
 
             if(i<=2){
@@ -349,12 +364,6 @@
                     handelpriceshort(data)
                 })
             }
-            // if(j<=2){
-            //     document.querySelector("#handelprice").addEventListener("change",function(){
-            //         j++;
-            //         handelprice(data)
-            //     })
-            // }
         })
 
     }

@@ -80,6 +80,7 @@ function appendCart(elem){
                 p13.textContent="Color : Black";
                 let p14=document.createElement("button");
                 p14.textContent="Delete";
+                p14.setAttribute("class","rdeleteButton")
                 div11.append(p11);
                 div12.append(p12);
                 div13.append(p13);
