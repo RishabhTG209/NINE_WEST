@@ -2,7 +2,7 @@
 
 Project: Clone of https://www.ninewest.com/ site
 
-In this project We have tried to make a look alike clone of Myntra Website. With our efforts and the technology stack, that we have learned till now in Unit-4 in Masai School, we were able to clone the front end, integrated it with backend and added similar looks and features.
+In this project We have tried to make a look alike clone of Ninewest E-commerce Website. With our efforts and the technology stack, that we have learned till now in Unit-4 in Masai School, we were able to clone the front end, integrated it with backend and added similar looks and features.
 
 ## Run Locally
 
@@ -14,6 +14,31 @@ Clone the project
   
   For Back-End
   git clone https://github.com/RishabhTG209/NineWest_Database
+```
+
+Deployment link of Database on Heroku
+```bash
+got to https://blooming-refuge-71619.herokuapp.com
+```
+
+Crud Operations
+```bash
+To fetch all Users data : https://blooming-refuge-71619.herokuapp.com/user
+```
+```bash
+To fetch all products data : https://blooming-refuge-71619.herokuapp.com/products
+```
+```bash
+To fetch List of products : https://blooming-refuge-71619.herokuapp.com/productlist
+```
+```bash
+To fetch Cart Data : https://blooming-refuge-71619.herokuapp.com/cart
+```
+```bash
+To Register : https://blooming-refuge-71619.herokuapp.com/register
+```
+```bash
+To Login : https://blooming-refuge-71619.herokuapp.com/login
 ```
 
 Install npm packages
