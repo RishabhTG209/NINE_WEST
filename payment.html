@@ -25,7 +25,7 @@
                 <div class="rsinsideseconddiv">
                     <div class="rsinside1">
                         <div class="rscommon"><p>Contact</p></div>
-                        <div class="rsspecial"><p>rishabhg.1996@gmail.com</p></div>
+                        <div class="rsspecial"><p id="rnameuser"></p></div>
                         <div id="rstomove"><p>Change</p></div>
                     </div>
                     <div class="rsline"></div>
@@ -152,6 +152,8 @@
 </html>
 <script src="./Scripts/payment.js"></script>
 <script>
+    var currentUser = JSON.parse(localStorage.getItem('currentUser'))
+    document.querySelector("#rnameuser").textContent=currentUser.user_data.email
     document.querySelector("#rpaynow").addEventListener("click",function(){
         window.location.href="thankyou.html"
     })
