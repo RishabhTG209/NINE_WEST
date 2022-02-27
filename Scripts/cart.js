@@ -73,7 +73,7 @@ function appendCart(elem){
                 let p1=document.createElement("p");
                 p1.textContent=el.product_id.name;
                 let p11=document.createElement("p");
-                p11.textContent="Size : 5";
+                p11.textContent="Size : 7";
                 let p12=document.createElement("p");
                 p12.textContent="Width : M";
                 let p13=document.createElement("p");

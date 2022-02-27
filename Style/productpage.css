@@ -185,7 +185,8 @@ body{
     grid-template-columns: repeat(10,1fr);
     grid-gap: 6px 9px;
 }
-#size-box>div{
+
+#size-box div{
     cursor: pointer;
     height: 80%;
     width: 100%;
@@ -195,6 +196,11 @@ body{
     text-align: center;
     color: grey;
 }
+#size-box div:hover{
+    border: 1px solid gray;
+    transition:.5s;
+}
+
 #r-interest-free{
     border: 1px solid lightgray;
     height: 4%;
@@ -391,3 +397,4 @@ body{
     color: grey;
     font-size: 10px;
 }
+
