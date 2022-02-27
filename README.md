@@ -16,9 +16,9 @@ We have Created this clone Website by using Media Queries which make our project
   ii) Async JS: Which helped us to show the slidshow and timers 
   iii) Hover Effect: styling most of the buttons, text and images.
 
-CONCLUSION : Yes we agree that there might be some places where things are static but yes in these 7 days we have done our best and completed how much was needed. And one thing I would like to add that teamwork is something which teaches you various things, if one stucks like for example in presentation then another comes forward and handle that situation. So, this was all from our side.
+CONCLUSION : Yes we agree that there might be some places where things are static but yes in these 7 days we have done our best and completed how much was needed. And one thing I would like to add that teamwork is something which teaches you various things, if one stucks then another comes forward and handle that situation. So, this was all from our side.
 
 Source of Images : Google.com, NineWest.com
 Source of Font : Google Font.
 Source of Icons : FontAwsome.com
-Source of Code : We took help from Developer Moziila
+Source of Code : Developer Moziila
