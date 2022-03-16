@@ -4,6 +4,16 @@ Project: Clone of https://www.ninewest.com/ site
 
 In this project We have tried to make a look alike clone of Ninewest E-commerce Website. With our efforts and the technology stack, that we have learned till now in Unit-4 in Masai School, we were able to clone the front end, integrated it with backend and added similar looks and features.
 
+![alt text](https://github.com/RishabhTG209/NINE_WEST/blob/main/NineWest%20Screenshots/ninewest1.JPG?raw=true)
+![alt text](https://github.com/RishabhTG209/NINE_WEST/blob/main/NineWest%20Screenshots/ninewest2.JPG?raw=true)
+![alt text](https://github.com/RishabhTG209/NINE_WEST/blob/main/NineWest%20Screenshots/ninewest3.JPG?raw=true)
+![alt text](https://github.com/RishabhTG209/NINE_WEST/blob/main/NineWest%20Screenshots/ninewest4.JPG?raw=true)
+![alt text](https://github.com/RishabhTG209/NINE_WEST/blob/main/NineWest%20Screenshots/ninewest5.JPG?raw=true)
+![alt text](https://github.com/RishabhTG209/NINE_WEST/blob/main/NineWest%20Screenshots/ninewest6.JPG?raw=true)
+![alt text](https://github.com/RishabhTG209/NINE_WEST/blob/main/NineWest%20Screenshots/ninewest7.JPG?raw=true)
+![alt text](https://github.com/RishabhTG209/NINE_WEST/blob/main/NineWest%20Screenshots/ninewest8.JPG?raw=true)
+![alt text](https://github.com/RishabhTG209/NINE_WEST/blob/main/NineWest%20Screenshots/ninewest9.JPG?raw=true)
+
 ## Run Locally
 
 Clone the project
